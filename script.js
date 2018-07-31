@@ -1,4 +1,4 @@
-var app = angular.module("Authapp", ["ngRoute", "ngTouch"]);
+var app = angular.module("Authapp", ["ngRoute", "ngTouch","ngAnimate"]);
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
@@ -78,9 +78,5 @@ app.config(function($routeProvider) {
 			
 		  $scope.toggle = function($index) {
 			$scope.index = $index;
-			};
-			
-			$scope.clearInfo = function(){
-				$scope.info = "";
 			};
 	})
