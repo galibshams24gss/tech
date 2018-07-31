@@ -102,11 +102,10 @@
 		display:none;
 		width: 100%;
 		height: 100%;
-		border: 1px solid navy;
 	  }
 	  
 	  .repeated-item.ng-enter, .repeated-item.ng-move {
-		transition: all 0.5s linear;
+		transition: all 1.0s linear;
 		opacity: 0.4;
 	  }
 	  
@@ -116,10 +115,14 @@
 	  }
 	  
 	  .repeated-item.ng-leave {
-		animation: 0.5s my_animation;
+		animation: 1.0s my_animation;
 	  }
 	  
 	  .open-accordion{
 	  display:block;
+	  }
+
+	  ul.repeated-item {
+		list-style-type: square;
 	  }
 	

@@ -3,12 +3,20 @@
     <div class="text-center">
     <br>
     <div class="accordion" >
-            <a class="btn btn-primary btn-lg" ng-click="toggle($index)"><b>{{item.id}}</b></a>
+            <a class="btn btn-primary btn-lg" ng-click="toggle($index)"><b>{{item.name}}</b></a>
     </div>
     <br>
     <div class="repeated-item" data-ng-class="{'open-accordion' : index === $index}" ng-model="accordionContent" >
-      <b>{{item.name}}</b>
+      <b>{{item.details}}</b>
     </div>
+
+    <div class="repeated-item" data-ng-class="{'open-accordion' : index === $index}" ng-model="accordionContent" >
+      <b>{{item.extra}}</b>
+    </div>
+
+    <ul class="repeated-item" data-ng-class="{'open-accordion' : index === $index}" ng-model="accordionContent" >
+      <li ng-repeat="ext in item.extras"><b>{{ext}}</b></li>
+    </ul>
     <br>
     </div>
 </div>

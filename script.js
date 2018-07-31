@@ -70,13 +70,17 @@ app.config(function($routeProvider) {
 
 	.controller("extwoController", function($scope){
 		$scope.items = [
-			{id:"Section 1", name:"Mauris mauris ante, blandit et, ultrices a, suscipit eget."},
-			{id:"Section 2", name:"Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet."},
-			{id:"Section 3", name:"Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis."},
-			{id:"Section 4", name:"Cras dictum. Pellentesque habitant morbi tristique senectus et netus."}
+			{name:"Section 1", details:"Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."},
+			{name:"Section 2", details:"Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna."},
+			{name:"Section 3", details:"Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.", extras:["List item one","List item two","List item three"]},
+			{name:"Section 4", details:"Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est.", extra:"Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."}
 			];
 			
 		  $scope.toggle = function($index) {
 			$scope.index = $index;
-		  };
+			};
+			
+			$scope.clearInfo = function(){
+				$scope.info = "";
+			};
 	})
