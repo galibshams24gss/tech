@@ -1,0 +1,15 @@
+<div class="container">
+<div ng-repeat="item in items">
+    <div class="text-center">
+    <br>
+    <div class="accordion" >
+            <a class="btn btn-primary btn-lg" ng-click="toggle($index)"><b>{{item.id}}</b></a>
+    </div>
+    <br>
+    <div class="repeated-item" data-ng-class="{'open-accordion' : index === $index}" ng-model="accordionContent" >
+      <b>{{item.name}}</b>
+    </div>
+    <br>
+    </div>
+</div>
+</div>
